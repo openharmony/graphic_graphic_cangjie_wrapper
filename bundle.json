@@ -1,0 +1,41 @@
+{
+    "name": "@ohos/graphic_cangjie_api",
+    "description": "graphic_cangjie_api",
+    "version": "6.0",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+      "destPath": "foundation/graphic/graphic_cangjie_api"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+      "name": "graphic_cangjie_api",
+      "subsystem": "graphic",
+      "syscap": [
+        "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+      ],
+      "adapted_system_type": [ "standard" ],
+      "features": [],
+      "rom": "10000KB",
+      "ram": "10000KB",
+      "hisysevent_config": [],
+      "deps": {
+        "components": [
+          "cangjie_api"
+        ]
+      },
+      "build": {
+        "sub_component": [
+          "//foundation/graphic/graphic_cangjie_api/kit/ArkGraphics2D:kit.ArkGraphics2D",
+          "//foundation/graphic/graphic_cangjie_api/ohos/color_manager:ohos.color_manager"
+        ],
+        "inner_kits": [
+          {
+            "name": "//foundation/graphic/graphic_cangjie_api/ohos/color_manager:ohos.color_manager"
+          }
+        ],
+        "test": []
+      }
+    }
+  }
