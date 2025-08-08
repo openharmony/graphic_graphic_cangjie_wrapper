@@ -21,6 +21,6 @@ ohos_cj_library("kit.ArkGraphics2D") {
 
   kit = true
   subsystem_name = "graphic"
-  part_name = "graphic_cangjie_api"
+  part_name = "graphic_cangjie_wrapper"
   lib_name = "ArkGraphics2D"
 }

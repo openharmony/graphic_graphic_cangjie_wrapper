@@ -29,7 +29,7 @@ OpenHarmony 图形栈的分层说明如下：
 ## 目录<a name="section16751364713"></a>
 
 ```
-foundation/graphic/graphic_cangjie_api
+foundation/graphic/graphic_cangjie_wrapper
 ├── ohos             # 仓颉图形子系统接口实现
 ├── kit              # 仓颉kit化代码
 ├── figures          # 存放readme中的架构图
@@ -39,4 +39,4 @@ foundation/graphic/graphic_cangjie_api
 
 **图形子系统**
 
-graphic_cangjie_api
+graphic_cangjie_wrapper

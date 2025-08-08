@@ -29,7 +29,7 @@ Engine layer: consists of the 2D graphics library and 3D graphics engine. The 2D
 ## Directory Structure
 
 ```
-foundation/graphic/graphic_cangjie_api
+foundation/graphic/graphic_cangjie_wrapper
 ├── ohos             # Cangjie Graphics Subsystem code
 ├── kit              # Cangjie kit code
 ├── figures          # architecture pictures
@@ -39,4 +39,4 @@ foundation/graphic/graphic_cangjie_api
 
 **Graphics subsystem**
 
-graphic_cangjie_api
+graphic_cangjie_wrapper

@@ -22,15 +22,15 @@ ohos_cj_library("ohos.color_manager") {
   ]
 
   cj_external_deps = [
-    "cangjie_api:ohos.ffi",
-    "cangjie_api:ohos.labels",
-    "arkui_cangjie_api:ohos.base",
-    "hiviewdfx_cangjie_api:ohos.hilog",
+    "cangjie_ark_interop:ohos.ffi",
+    "cangjie_ark_interop:ohos.labels",
+    "arkui_cangjie_wrapper:ohos.base",
+    "hiviewdfx_cangjie_wrapper:ohos.hilog",
   ]
 
   external_deps = [ "graphic_2d:cj_color_manager_ffi" ]
 
   subsystem_name = "graphic"
-  part_name = "graphic_cangjie_api"
+  part_name = "graphic_cangjie_wrapper"
   lib_name = "color_manager"
 }
