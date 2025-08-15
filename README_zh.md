@@ -1,4 +1,4 @@
-# 图形仓颉
+# 图形图像仓颉接口
 
 图形仓颉主要包括UI组件、布局、动画、字体、输入事件、窗口管理、渲染绘制等模块，构建基于标准OS的应用框架满足富设备的OpenHarmony系统应用开发。
 
@@ -37,6 +37,4 @@ foundation/graphic/graphic_cangjie_wrapper
 
 ## 相关仓<a name="section11578621131119"></a>
 
-**图形仓颉**
-
-graphic_cangjie_wrapper
+- [graphic_graphic_2d](https://gitee.com/openharmony/graphic_graphic_2d/blob/master/README.md)
