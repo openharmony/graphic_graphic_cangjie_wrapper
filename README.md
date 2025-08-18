@@ -1,14 +1,12 @@
-# Graphics Subsystem
+# graphic_cangjie_wrapper
 
-The Graphics subsystem mainly consists of user interface (UI) components, layout, animator, font, input event, window management, and rendering and drawing modules. It is an application framework that can be built on the standard OS to develop OpenHarmony applications for standard- and large-system devices.
+The graphic_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the Graphics Subsystem.The Graphics subsystem mainly consists of user interface (UI) components, layout, animator, font, input event, window management, and rendering and drawing modules. It is an application framework that can be built on the standard OS to develop OpenHarmony applications for standard- and large-system devices.
 
 ## Introduction
 
-The Graphics subsystem provides graphics APIs.
-
 The following figure shows the architecture of the Graphics subsystem.
 
-![Graphics subsystem architecture](figures/en_graphic_rosen_architecture.jpg)
+![Graphics subsystem architecture](figures/graphic_cangjie_wrapper_architecture_en.jpg)
 
 The OpenHarmony graphics stack is divided into the following layers:
 
@@ -37,6 +35,4 @@ foundation/graphic/graphic_cangjie_wrapper
 
 ## Repositories Involved
 
-**Graphics subsystem**
-
-graphic_cangjie_wrapper
+- [graphic_graphic_2d](https://gitee.com/openharmony/graphic_graphic_2d/blob/master/README.md)
