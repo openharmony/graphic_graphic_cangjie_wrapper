@@ -13,8 +13,4 @@
  * limitations under the License.
  */
 
-package ohos.color_manager
-
-import ohos.hilog.*
-
-let COLOR_MGR_LOG = HilogChannel(3, 0xD001400, "CJ-colorMgr")
+package ohos.graphics
