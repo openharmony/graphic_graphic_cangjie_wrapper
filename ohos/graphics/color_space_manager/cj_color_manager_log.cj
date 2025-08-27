@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
-package kit.ArkGraphics2D
+package ohos.graphics.color_space_manager
 
-public import ohos.graphics.color_space_manager.*
+import ohos.hilog.*
+
+let COLOR_MGR_LOG = HilogChannel(3, 0xD001400, "CJ-colorMgr")

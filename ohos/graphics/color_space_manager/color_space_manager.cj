@@ -13,11 +13,11 @@
  * limitations under the License.
  */
 
-package ohos.color_manager
+package ohos.graphics.color_space_manager
 
 import ohos.ffi.*
 import ohos.labels.*
-import ohos.base.*
+import ohos.business_exception.BusinessException
 
 foreign {
     func CJ_ColorMgrCreateByColorSpace(colorSpaceName: UInt32, id: CPointer<Int64>): RetDataCString
@@ -34,15 +34,15 @@ foreign {
 /**
  * Create a color space manager by provided color space type.
  *
- * @param { ColorSpace } colorSpaceName - Indicates the type of color space
+ * @param { ColorSpace } colorSpaceName - Indicates the type of color space.
  * @returns { ColorSpaceManager } Returns a color space manager object created by provided type.
- * @throws { BusinessException } 401 - Parameter error.
- * @throws { BusinessException } 18600001 - Parameter value is abnormal.
- * @brief function create(colorSpaceName: ColorSpace): ColorSpaceManager
+ * @throws { BusinessException } 401 - Parameter error. Possible cause: 1.Incorrect parameter type.
+ *                                 2.Parameter verification failed.
+ * @throws { BusinessException } 18600001 - The parameter value is abnormal.
+ * @relation function create(colorSpaceName: ColorSpace): ColorSpaceManager
  */
 @!APILevel[
     21,
-    crossplatform: true,
     stagemodelonly: true,
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
@@ -62,16 +62,16 @@ public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
 /**
  * Create a customized color space manager by its color primaries and gamma value.
  *
- * @param { ColorSpacePrimaries } primaries - Indicates the customized color primaries
- * @param { number } gamma - Indicates display gamma value
+ * @param { ColorSpacePrimaries } primaries - Indicates the customized color primaries.
+ * @param { Float32 } gamma - Indicates display gamma value
  * @returns { ColorSpaceManager } Returns a color space manager object created by provided type.
- * @throws { BusinessException } 401 - Parameter error.
- * @throws { BusinessException } 18600001 - Parameter value is abnormal.
- * @brief function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManager
+ * @throws { BusinessException } 401 - Parameter error. Possible cause: 1.Incorrect parameter type.
+ *                                 2.Parameter verification failed.
+ * @throws { BusinessException } 18600001 - The parameter value is abnormal.
+ * @relation function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManager
  */
 @!APILevel[
     21,
-    crossplatform: true,
     stagemodelonly: true,
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
@@ -91,11 +91,12 @@ public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceMa
 }
 
 /**
- * Defines a color space object and manages its key information
+ * Defines a color space object and manages its key information.
+ *
+ * @relation interface ColorSpaceManager
  */
 @!APILevel[
     21,
-    crossplatform: true,
     stagemodelonly: true,
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
@@ -112,12 +113,11 @@ public class ColorSpaceManager <: RemoteDataLite {
      * Get the name of color space type.
      *
      * @returns { ColorSpace } Returns the name of color space type.
-     * @throws { BusinessException } 18600001 - Parameter value is abnormal.
-     * @brief getColorSpaceName(): ColorSpace
+     * @throws { BusinessException } 18600001 - The parameter value is abnormal.
+     * @relation getColorSpaceName(): ColorSpace
      */
     @!APILevel[
         21,
-        crossplatform: true,
         stagemodelonly: true,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
@@ -126,20 +126,19 @@ public class ColorSpaceManager <: RemoteDataLite {
             var errCode: Int32 = 0
             let res = CJ_ColorMgrGetColorSpaceName(getID(), inout errCode)
             checkRet(errCode, "[ColorSpaceManager] getColorSpaceName: ")
-            return ColorSpace.parseInner(res)
+            return ColorSpace.parse(res)
         }
     }
 
     /**
      * Get white point(x, y) of color space.
      *
-     * @returns { Array<number> } Returns the white point value of color space.
-     * @throws { BusinessException } 18600001 - Parameter value is abnormal.
-     * @brief getWhitePoint(): Array<number>
+     * @returns { Array<Float32> } Returns the white point value of color space.
+     * @throws { BusinessException } 18600001 - The parameter value is abnormal.
+     * @relation getWhitePoint(): Array<number>
      */
     @!APILevel[
         21,
-        crossplatform: true,
         stagemodelonly: true,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
@@ -160,13 +159,12 @@ public class ColorSpaceManager <: RemoteDataLite {
     /**
      * Get gamma value of color space.
      *
-     * @returns { number } Returns the gamma value of color space.
-     * @throws { BusinessException } 18600001 - Parameter value is abnormal.
-     * @brief getGamma(): number
+     * @returns { Float32 } Returns the gamma value of color space.
+     * @throws { BusinessException } 18600001 - The parameter value is abnormal.
+     * @relation getGamma(): number
      */
     @!APILevel[
         21,
-        crossplatform: true,
         stagemodelonly: true,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]

@@ -13,10 +13,10 @@
  * limitations under the License.
  */
 
-package ohos.color_manager
+package ohos.graphics.color_space_manager
 
 import std.collection.HashMap
-import ohos.base.*
+import ohos.business_exception.*
 
 let ERROR_CODE_MAP = HashMap<Int32, String>(
     [(18600001, "Parameter value is abnormal. Cannot create color manager object using ApiColorSpaceType 5")])
