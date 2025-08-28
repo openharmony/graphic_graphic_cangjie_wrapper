@@ -22,7 +22,9 @@
       "hisysevent_config": [],
       "deps": {
         "components": [
-          "cangjie_ark_interop"
+          "cangjie_ark_interop",
+          "graphic_2d",
+          "hiviewdfx_cangjie_wrapper"
         ]
       },
       "build": {
