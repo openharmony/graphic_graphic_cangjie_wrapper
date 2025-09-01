@@ -23,8 +23,9 @@ foundation/graphic/graphic_cangjie_wrapper
 ├── figures                # 存放README中的架构图
 ├── kit                    # 仓颉图形图像kit化代码
 │   └── ArkGraphics2D      # 仓颉ArkGraphics2D实现
-└── ohos                   # 仓颉图形图像接口实现
-    └── graphics           # 仓颉图形接口实现
+├── ohos                   # 仓颉图形图像接口实现
+│   └── graphics           # 仓颉图形接口实现
+└── test                   # 仓颉测试代码
 ```
 
 ## 使用说明
