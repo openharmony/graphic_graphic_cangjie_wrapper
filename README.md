@@ -23,8 +23,9 @@ foundation/graphic/graphic_cangjie_wrapper
 ├── figures                # architecture pictures
 ├── kit                    # Cangjie Graphics kit code
 │   └── ArkGraphics2D      # Cangjie ArkGraphics2D code implementation
-└── ohos                   # Cangjie Graphics Subsystem code
-    └── graphics           # Cangjie Graphics code implementation
+├── ohos                   # Cangjie Graphics Subsystem code
+│   └── graphics           # Cangjie Graphics code implementation
+└── test                   # Cangjie test code
 ```
 
 ## Usage Guidelines
