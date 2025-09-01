@@ -8,12 +8,13 @@ The graphic_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based o
 
 The following figure shows the architecture of the Graphics subsystem.
 
+**Figure 1** Architecture of the Graphics subsystem
 ![Graphics subsystem architecture](figures/graphic_cangjie_wrapper_architecture_en.png)
 
 As shown in the architecture diagram:
 
-- Color Manager: Provide gamut-dependent configuration capabilities;
-- Cangjie graphics FFI interface definition: Responsible for defining the C-Interoperable Cangjie interface, which is used to realize Cangjie graphics;
+- Color Manager: Provide gamut-dependent configuration capabilities.
+- Cangjie graphics FFI interface definition: Responsible for defining the C-Interoperable Cangjie interface, which is used to realize Cangjie graphics.
 - Effect: Mainly completes the ability to process image effects, rendering effects and other effects, including: multi-effect series and parallel processing, adding rendering effects, control interaction effects and other related capabilities during layout.
 
 ## Directory Structure
@@ -33,10 +34,10 @@ The current Cangjie Graphics interface provides only Color Management.
 
 Compared with ArkTS, the following functions are not supported at the moment:
 
-- The rendering capabilities of the UI framework;
-- 2D rendering, 3D rendering and rendering engine management;
-- Related capabilities of the animation engine;
-- Ability to process image effects, rendering effects;
+- The rendering capabilities of the UI framework.
+- 2D rendering, 3D rendering and rendering engine management.
+- Related capabilities of the animation engine.
+- Ability to process image effects, rendering effects.
 - The display and memory management capabilities.
 
 For Graphic-related APIs, please refer to [ohos.graphics.color_space_manager (Color Management)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/ArkGraphics2D/cj-apis-color_manager.md).
