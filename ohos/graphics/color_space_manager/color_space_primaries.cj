@@ -26,8 +26,7 @@ import std.deriving.Derive
  */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public enum ColorSpace {
@@ -37,8 +36,7 @@ public enum ColorSpace {
      * @relation UNKNOWN = 0
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Unknown
@@ -49,8 +47,7 @@ public enum ColorSpace {
      * @relation ADOBE_RGB_1998 = 1
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     AdobeRgb1998
@@ -61,8 +58,7 @@ public enum ColorSpace {
      * @relation DCI_P3 = 2
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DciP3
@@ -73,8 +69,7 @@ public enum ColorSpace {
      * @relation DISPLAY_P3 = 3
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DisplayP3
@@ -85,8 +80,7 @@ public enum ColorSpace {
      * @relation SRGB = 4
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Srgb
@@ -97,8 +91,7 @@ public enum ColorSpace {
      * @relation CUSTOM = 5
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Custom
@@ -109,8 +102,7 @@ public enum ColorSpace {
      * @relation BT709 = 6
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt709
@@ -121,8 +113,7 @@ public enum ColorSpace {
      * @relation BT601_EBU = 7
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt601Ebu
@@ -133,8 +124,7 @@ public enum ColorSpace {
      * @relation BT601_SMPTE_C = 8
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt601SmpteC
@@ -145,8 +135,7 @@ public enum ColorSpace {
      * @relation BT2020_HLG = 9
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt2020Hlg
@@ -157,8 +146,7 @@ public enum ColorSpace {
      * @relation BT2020_PQ = 10
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt2020Pq
@@ -169,8 +157,7 @@ public enum ColorSpace {
      * @relation P3_HLG = 11
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     P3Hlg
@@ -181,8 +168,7 @@ public enum ColorSpace {
      * @relation P3_PQ = 12
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     P3Pq
@@ -193,8 +179,7 @@ public enum ColorSpace {
      * @relation ADOBE_RGB_1998_LIMIT = 13
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     AdobeRgb1998Limit
@@ -205,8 +190,7 @@ public enum ColorSpace {
      * @relation DISPLAY_P3_LIMIT = 14
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DisplayP3Limit
@@ -217,8 +201,7 @@ public enum ColorSpace {
      * @relation SRGB_LIMIT = 15
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     SrgbLimit
@@ -229,8 +212,7 @@ public enum ColorSpace {
      * @relation BT709_LIMIT = 16
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt709Limit
@@ -241,8 +223,7 @@ public enum ColorSpace {
      * @relation BT601_EBU_LIMIT = 17
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt601EbuLimit
@@ -253,8 +234,7 @@ public enum ColorSpace {
      * @relation BT601_SMPTE_C_LIMIT = 18
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt601SmpteCLimit
@@ -265,8 +245,7 @@ public enum ColorSpace {
      * @relation BT2020_HLG_LIMIT = 19
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt2020HlgLimit
@@ -277,8 +256,7 @@ public enum ColorSpace {
      * @relation BT2020_PQ_LIMIT = 20
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     Bt2020PqLimit
@@ -289,8 +267,7 @@ public enum ColorSpace {
      * @relation P3_HLG_LIMIT = 21
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     P3HlgLimit
@@ -301,8 +278,7 @@ public enum ColorSpace {
      * @relation P3_PQ_LIMIT = 22
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     P3PqLimit
@@ -313,8 +289,7 @@ public enum ColorSpace {
      * @relation LINEAR_P3 = 23
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     LinearP3
@@ -325,8 +300,7 @@ public enum ColorSpace {
      * @relation LINEAR_SRGB = 24
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     LinearSrgb
@@ -337,8 +311,7 @@ public enum ColorSpace {
      * @relation LINEAR_BT709 = LINEAR_SRGB
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     LinearBt709
@@ -349,8 +322,7 @@ public enum ColorSpace {
      * @relation LINEAR_BT2020 = 25
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     LinearBt2020
@@ -361,8 +333,7 @@ public enum ColorSpace {
      * @relation DISPLAY_SRGB = SRGB
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DisplaySrgb
@@ -373,8 +344,7 @@ public enum ColorSpace {
      * @relation DISPLAY_P3_SRGB = DISPLAY_P3
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DisplayP3Srgb
@@ -385,8 +355,7 @@ public enum ColorSpace {
      * @relation DISPLAY_P3_HLG = P3_HLG
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DisplayP3Hlg
@@ -397,8 +366,7 @@ public enum ColorSpace {
      * @relation DISPLAY_P3_PQ = P3_PQ
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DisplayP3Pq
@@ -481,8 +449,7 @@ public enum ColorSpace {
  * @relation interface ColorSpacePrimaries
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public class ColorSpacePrimaries {
@@ -492,8 +459,7 @@ public class ColorSpacePrimaries {
      * @relation redX: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var redX: Float32
@@ -504,8 +470,7 @@ public class ColorSpacePrimaries {
      * @relation redY: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var redY: Float32
@@ -516,8 +481,7 @@ public class ColorSpacePrimaries {
      * @relation greenX: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var greenX: Float32
@@ -528,8 +492,7 @@ public class ColorSpacePrimaries {
      * @relation greenY: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var greenY: Float32
@@ -540,8 +503,7 @@ public class ColorSpacePrimaries {
      * @relation blueX: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var blueX: Float32
@@ -552,8 +514,7 @@ public class ColorSpacePrimaries {
      * @relation blueY: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var blueY: Float32
@@ -564,8 +525,7 @@ public class ColorSpacePrimaries {
      * @relation whitePointX: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var whitePointX: Float32
@@ -576,8 +536,7 @@ public class ColorSpacePrimaries {
      * @relation whitePointY: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public var whitePointY: Float32
@@ -587,8 +546,7 @@ public class ColorSpacePrimaries {
      *
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public init(redX: Float32, redY: Float32, greenX: Float32, greenY: Float32, blueX: Float32, blueY: Float32, whitePointX: Float32, whitePointY: Float32) {
