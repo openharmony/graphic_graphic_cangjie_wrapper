@@ -18,7 +18,7 @@
  */
 package ohos_app_cangjie_entry
 
-internal import kit.ArkGraphics2D.*
+internal import ArkGraphics2D.*
 import ohos.base.*
 import std.unittest.testmacro.*
 import std.math.numeric.*
