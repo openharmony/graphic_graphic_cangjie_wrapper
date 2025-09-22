@@ -32,7 +32,7 @@ import std.unittest.testmacro.*
 @Test
 class Test_color_space {
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_UNKNOWN() {
         try {
             create(ColorSpace.Unknown)
@@ -42,7 +42,7 @@ class Test_color_space {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_CUSTOM() {
         try {
             create(ColorSpace.Custom)
@@ -52,7 +52,7 @@ class Test_color_space {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_create() {
         try {
             @Expect(create(ColorSpace.AdobeRgb1998).getColorSpaceName().toString(), "ColorSpace.AdobeRgb1998")
@@ -90,7 +90,7 @@ class Test_color_space {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_toString_ColorSpace() {
         @Expect(ColorSpace.Unknown.toString(), "ColorSpace.Unknown")
         @Expect(ColorSpace.AdobeRgb1998.toString(), "ColorSpace.AdobeRgb1998")
