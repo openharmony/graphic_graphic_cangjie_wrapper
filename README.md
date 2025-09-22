@@ -14,26 +14,32 @@ The following figure shows the architecture of the Graphics subsystem.
 As shown in the architecture diagram:
 
 - Color Manager: Provide gamut-dependent configuration capabilities.
-- Cangjie graphics FFI interface definition: Responsible for defining the C-Interoperable Cangjie interface, which is used to realize Cangjie graphics.
+- Cangjie graphics FFI interface definition: Responsible for defining the C language interoperable Cangjie interface, which is used to realize Cangjie graphics.
 - Effect: Mainly completes the ability to process image effects, rendering effects and other effects, including: multi-effect series and parallel processing, adding rendering effects, control interaction effects and other related capabilities during layout.
 
 ## Directory Structure
 
 ```
 foundation/graphic/graphic_cangjie_wrapper
-├── figures                # architecture pictures
-├── kit                    # Cangjie Graphics kit code
-│   └── ArkGraphics2D      # Cangjie ArkGraphics2D code implementation
-├── ohos                   # Cangjie Graphics Subsystem code
-│   └── graphics           # Cangjie Graphics code implementation
-└── test                   # Cangjie test code
+├── figures                           # architecture pictures
+├── kit                               # Cangjie Graphics kit code
+│   └── ArkGraphics2D                 # Cangjie ArkGraphics2D code implementation
+├── ohos                              # Cangjie Graphics Subsystem code
+│   └── graphics                      # Cangjie Graphics code implementation
+│       └── color_space_manager       # Color management module
+└── test                              # Cangjie test code
+    └── APILevel22                    # API Level 22 test code
+        └── color_manager             # Color management tests
+            └── test                  # Color management test project
 ```
 
 ## Usage Guidelines
 
 The current Cangjie Graphics interface provides only Color Management.
 
-Compared with ArkTS, the following functions are not supported at the moment:
+Color management, including creating standard color spaces and custom color spaces, as well as methods for obtaining color space related information.
+
+Compared with the API capabilities provided by ArkTS, the following functions are not supported at the moment:
 
 - The rendering capabilities of the UI framework.
 - 2D rendering, 3D rendering and rendering engine management.
@@ -41,7 +47,7 @@ Compared with ArkTS, the following functions are not supported at the moment:
 - Ability to process image effects, rendering effects.
 - The display and memory management capabilities.
 
-For Graphic-related APIs, please refer to [ohos.graphics.color_space_manager (Color Management)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/ArkGraphics2D/cj-apis-color_manager.md).
+For Graphic-related APIs, please refer to [Color Management API](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/ArkGraphics2D/cj-apis-color_manager.md).
 
 ## Code Contribution
 
@@ -49,4 +55,8 @@ Developers are welcome to contribute code, documentation, etc. For specific cont
 
 ## Repositories Involved
 
-- [graphic_graphic_2d](https://gitee.com/openharmony/graphic_graphic_2d/blob/master/README.md)
+[graphic_graphic_2d](https://gitcode.com/openharmony/graphic_graphic_2d/blob/master/README.md)
+
+[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
+
+[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README.md)

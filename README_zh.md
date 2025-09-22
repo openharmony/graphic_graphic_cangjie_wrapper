@@ -14,26 +14,32 @@
 如架构图所示：
 
 - 色彩管理：提供色域相关配置能力。
-- 仓颉图形图像FFI接口定义：负责定义C互操作仓颉接口，用于实现仓颉图形图像能力。
+- 仓颉图形图像FFI接口定义：负责定义被Cangjie语言调用的C语言互操作接口，用于实现仓颉图形图像能力。
 - Effect：主要完成图片效果、渲染特效等效果处理的能力，包括：多效果的串联、并联处理，在布局时加入渲染特效、控件交互特效等相关能力。
 
 ## 目录
 
 ```
 foundation/graphic/graphic_cangjie_wrapper
-├── figures                # 存放README中的架构图
-├── kit                    # 仓颉图形图像kit化代码
-│   └── ArkGraphics2D      # 仓颉ArkGraphics2D实现
-├── ohos                   # 仓颉图形图像接口实现
-│   └── graphics           # 仓颉图形接口实现
-└── test                   # 仓颉测试代码
+├── figures                           # 存放README中的架构图
+├── kit                               # 仓颉图形图像kit化代码
+│   └── ArkGraphics2D                 # 仓颉ArkGraphics2D实现
+├── ohos                              # 仓颉图形图像接口实现
+│   └── graphics                      # 仓颉图形接口实现
+│       └── color_space_manager       # 色彩管理模块
+└── test                              # 仓颉测试代码
+    └── APILevel22                    # API Level 22测试代码
+        └── color_manager             # 色彩管理测试
+            └── test                  # 色彩管理测试工程
 ```
 
 ## 使用说明
 
 图形图像仓颉接口当前仅提供了色彩管理相关功能。
 
-与ArkTS相比，暂不支持以下功能：
+色彩管理，包括创建标准色彩空间和自定义色彩空间，以及获取色彩空间相关信息的方法。支持开发者在图片处理、相机管理中设置/获取颜色空间相关信息。
+
+与ArkTS提供的API能力相比，暂不支持以下功能：
 
 - UI框架的绘制能力。
 - 2D渲染、3D渲染和渲染引擎的管理。
@@ -42,7 +48,7 @@ foundation/graphic/graphic_cangjie_wrapper
 - 显示与内存管理能力。
 
 
-图形相关API请参见[ohos.graphics.color_space_manager（色彩管理）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/ArkGraphics2D/cj-apis-color_manager.md)。
+图形相关API请参见[色彩管理API](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/ArkGraphics2D/cj-apis-color_manager.md)。
 
 ## 参与贡献
 
@@ -50,4 +56,8 @@ foundation/graphic/graphic_cangjie_wrapper
 
 ## 相关仓
 
-- [graphic_graphic_2d](https://gitee.com/openharmony/graphic_graphic_2d/blob/master/README_zh.md)
+[graphic_graphic_2d](https://gitcode.com/openharmony/graphic_graphic_2d/blob/master/README_zh.md)
+
+[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README_zh.md)
+
+[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README_zh.md)

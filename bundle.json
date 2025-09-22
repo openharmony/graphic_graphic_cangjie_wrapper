@@ -1,44 +1,46 @@
 {
-    "name": "@ohos/graphic_cangjie_wrapper",
-    "description": "The graphic_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the Graphics Subsystem.",
-    "version": "6.0",
-    "license": "Apache License 2.0",
-    "publishAs": "code-segment",
-    "segment": {
-      "destPath": "foundation/graphic/graphic_cangjie_wrapper"
+  "name": "@ohos/graphic_cangjie_wrapper",
+  "description": "The graphic_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the Graphics Subsystem.",
+  "version": "6.0",
+  "license": "Apache License 2.0",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "foundation/graphic/graphic_cangjie_wrapper"
+  },
+  "dirs": {},
+  "scripts": {},
+  "component": {
+    "name": "graphic_cangjie_wrapper",
+    "subsystem": "graphic",
+    "syscap": [
+      "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+    ],
+    "adapted_system_type": [
+      "standard"
+    ],
+    "features": [],
+    "rom": "100KB",
+    "ram": "80KB",
+    "hisysevent_config": [],
+    "deps": {
+      "components": [
+        "cangjie_ark_interop",
+        "graphic_2d",
+        "hiviewdfx_cangjie_wrapper"
+      ]
     },
-    "dirs": {},
-    "scripts": {},
-    "component": {
-      "name": "graphic_cangjie_wrapper",
-      "subsystem": "graphic",
-      "syscap": [
-        "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+    "build": {
+      "sub_component": [
+        "//foundation/graphic/graphic_cangjie_wrapper/kit/ArkGraphics2D:kit.ArkGraphics2D",
+        "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics:ohos.graphics",
+        "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
       ],
-      "adapted_system_type": [ "standard" ],
-      "features": [],
-      "rom": "100KB",
-      "ram": "80KB",
-      "hisysevent_config": [],
-      "deps": {
-        "components": [
-          "cangjie_ark_interop",
-          "graphic_2d",
-          "hiviewdfx_cangjie_wrapper"
-        ]
-      },
-      "build": {
-        "sub_component": [
-          "//foundation/graphic/graphic_cangjie_wrapper/kit/ArkGraphics2D:kit.ArkGraphics2D",
-          "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics:ohos.graphics",
-          "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
-        ],
-        "inner_kits": [
-          {
-            "name": "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
-          }
-        ],
-        "test": []
-      }
+      "inner_kits": [
+        {
+          "name": "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
+        }
+      ],
+      "test": []
     }
   }
+}
