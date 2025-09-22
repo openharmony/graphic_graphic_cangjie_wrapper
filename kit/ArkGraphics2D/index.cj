@@ -13,6 +13,6 @@
  * limitations under the License.
  */
 
-package kit.ArkGraphics2D
+package ArkGraphics2D
 
 public import ohos.graphics.color_space_manager.*
