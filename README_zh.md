@@ -16,6 +16,8 @@
 - 色彩管理：提供色域相关配置能力。
 - 仓颉图形图像FFI接口定义：负责定义被Cangjie语言调用的C语言互操作接口，用于实现仓颉图形图像能力。
 - Effect：主要完成图片效果、渲染特效等效果处理的能力，包括：多效果的串联、并联处理，在布局时加入渲染特效、控件交互特效等相关能力。
+- 仓颉互操作：封装C语言互操作公共接口，并提供仓颉标签类实现用于对仓颉API进行标注，以及提供抛向用户的BusinessException异常类定义。
+- 仓颉DFX：负责提供日志接口，用于在关键路径处打印日志。
 
 ## 目录
 
@@ -28,9 +30,8 @@ foundation/graphic/graphic_cangjie_wrapper
 │   └── graphics                      # 仓颉图形接口实现
 │       └── color_space_manager       # 色彩管理模块
 └── test                              # 仓颉测试代码
-    └── APILevel22                    # API Level 22测试代码
-        └── color_manager             # 色彩管理测试
-            └── test                  # 色彩管理测试工程
+    └── color_manager                 # 色彩管理测试
+        └── test                      # 色彩管理测试工程
 ```
 
 ## 使用说明
