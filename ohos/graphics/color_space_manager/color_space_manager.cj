@@ -42,7 +42,7 @@ foreign {
  * @relation function create(colorSpaceName: ColorSpace): ColorSpaceManager
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
@@ -70,7 +70,7 @@ public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
  * @relation function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManager
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceManager {
@@ -94,7 +94,7 @@ public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceMa
  * @relation interface ColorSpaceManager
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public class ColorSpaceManager <: RemoteDataLite {
@@ -114,7 +114,7 @@ public class ColorSpaceManager <: RemoteDataLite {
      * @relation getColorSpaceName(): ColorSpace
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public func getColorSpaceName(): ColorSpace {
@@ -134,7 +134,7 @@ public class ColorSpaceManager <: RemoteDataLite {
      * @relation getWhitePoint(): Array<number>
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public func getWhitePoint(): Array<Float32> {
@@ -159,7 +159,7 @@ public class ColorSpaceManager <: RemoteDataLite {
      * @relation getGamma(): number
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public func getGamma(): Float32 {
