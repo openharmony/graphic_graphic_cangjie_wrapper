@@ -16,6 +16,8 @@ As shown in the architecture diagram:
 - Color Manager: Provide gamut-dependent configuration capabilities.
 - Cangjie graphics FFI interface definition: Responsible for defining the C language interoperable Cangjie interface, which is used to realize Cangjie graphics.
 - Effect: Mainly completes the ability to process image effects, rendering effects and other effects, including: multi-effect series and parallel processing, adding rendering effects, control interaction effects and other related capabilities during layout.
+- Cangjie ark interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
+- Cangjie DFX: Responsible for providing log interfaces for printing logs at critical paths.
 
 ## Directory Structure
 
@@ -28,16 +30,15 @@ foundation/graphic/graphic_cangjie_wrapper
 │   └── graphics                      # Cangjie Graphics code implementation
 │       └── color_space_manager       # Color management module
 └── test                              # Cangjie test code
-    └── APILevel22                    # API Level 22 test code
-        └── color_manager             # Color management tests
-            └── test                  # Color management test project
+    └── color_manager                 # Color management tests
+        └── test                      # Color management test project
 ```
 
 ## Usage Guidelines
 
 The current Cangjie Graphics interface provides only Color Management.
 
-Color management, including creating standard color spaces and custom color spaces, as well as methods for obtaining color space related information.
+Color management, including creating standard color spaces and custom color spaces, as well as methods for obtaining color space related information. Supports developers in setting/getting color space related information in image processing and camera management.
 
 Compared with the API capabilities provided by ArkTS, the following functions are not supported at the moment:
 
