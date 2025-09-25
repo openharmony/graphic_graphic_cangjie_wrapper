@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The graphic_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on Graphic_2D capabilities. Provides Cangjie color management capability API. The currently open file management Cangjie interface only supports standard devices.
+The graphic_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony for application developers to provide Cangjie color management capability API. The currently open file management Cangjie interface only supports standard devices.
 
 ## System Architecture
 
@@ -15,17 +15,16 @@ As shown in the architecture diagram:
 
 Interface layer description:
 
-- Color Management API: Cangjie public interfaces based on color management encapsulation exposed to users.
+- Color Management API: Cangjie public interfaces based on color management encapsulation exposed to developers.
 
 Framework layer description:
 
-- Color Management Wrapper: Provide gamut-dependent configuration capabilities.
-- Cangjie graphics FFI interface definition: Responsible for defining the C language interoperable Cangjie interface, which is used to realize Cangjie graphics.
+- Color Management Wrapper: Provide gamut-dependent configuration capabilities. This encapsulation layer is a Cangjie encapsulation implementation of color management functionality based on graphic_2d.
 
 Cangjie Graphics Dependencies:
 
-- graphic_2d: Provides C language interfaces that can be called by the graphics Cangjie interface to complete image effects, rendering effects and other effects processing capabilities, including: multi-effect series and parallel processing, adding rendering effects, control interaction effects and other related capabilities during layout.
-- Cangjie ark interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
+- graphic_2d: Provides native functionality implementation of image effects, rendering effects and other effects processing capabilities that can be called by the graphics Cangjie wrapper, including: multi-effect series and parallel processing, adding rendering effects, control interaction effects and other related capabilities during layout.
+- Cangjie Interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
 - Cangjie DFX: Responsible for providing log interfaces, providing Cangjie interfaces that can be called by the graphics Cangjie interface to print logs at critical paths.
 
 ## Directory Structure
@@ -40,7 +39,6 @@ foundation/graphic/graphic_cangjie_wrapper
 │       └── color_space_manager       # Color management module
 └── test                              # Cangjie test code
     └── color_manager                 # Color management tests
-        └── test                      # Color management test project
 ```
 
 ## Usage Guidelines
@@ -49,17 +47,17 @@ The current Cangjie Graphics interface provides only Color Management.
 
 Color management, including creating standard color spaces and custom color spaces, as well as methods for obtaining color space related information. Supports developers in setting/getting color space related information in image processing and camera management.
 
-For Graphic-related APIs, please refer to [Color Management API](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/ArkGraphics2D/cj-apis-color_manager.md).
+For usage guidelines, please refer to [Color Management Development Guide](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_en/graphics/cj-color-manager-development-guide.md).
 
 ## Constraints
 
-Compared with the API capabilities provided by ArkTS, the following functions are not supported at the moment:
+Compared with the API capabilities provided by ArkTS, the following functions are not supported:
 
-- The rendering capabilities of the UI framework.
-- 2D rendering, 3D rendering and rendering engine management.
-- Related capabilities of the animation engine.
-- Ability to process image effects, rendering effects.
-- The display and memory management capabilities.
+- [Image processing capabilities for image effects and rendering effects](https://gitcode.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkgraphics2d/js-apis-effectKit.md).
+- [Variable frame rate feature for self-drawing UI](https://gitcode.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-displaySync.md).
+- [HDR (High Dynamic Range) capability](https://gitcode.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkgraphics2d/js-apis-hdrCapability.md)
+- [Text layout and font management capabilities](https://gitcode.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-text.md).
+- [Effect cascading capability](https://gitcode.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkgraphics2d/js-apis-uiEffect.md)
 
 ## Code Contribution
 
