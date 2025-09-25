@@ -1,8 +1,8 @@
-# 图形图像仓颉接口
+# 图形图像仓颉封装
 
 ## 简介
 
-图形图像仓颉接口是在OpenHarmony上基于图形子系统能力之上封装的仓颉API。图形子系统为OpenHarmony提供包括UI组件、布局、动画、字体、输入事件、窗口管理、渲染绘制等模块，构建基于标准OS的应用框架满足standard设备的OpenHarmony系统应用开发。
+图形图像仓颉接口是在OpenHarmony上面向开发者进行应用开发使用Graphic_2D能力封装的仓颉API实现。提供了仓颉的色彩管理能力API，当前开放的文件管理仓颉接口仅支持standard设备。
 
 ## 系统架构
 
@@ -13,11 +13,20 @@
 
 如架构图所示：
 
-- 色彩管理：提供色域相关配置能力。
+接口层说明：
+
+- 色彩管理API：基于色彩管理封装面向开发者开放的仓颉公开接口声明。
+
+框架层说明：
+
+- 色彩管理封装：提供色域相关配置能力。该封装层是基于graphic_2d对色彩管理功能进行的仓颉封装实现。
 - 仓颉图形图像FFI接口定义：负责定义被Cangjie语言调用的C语言互操作接口，用于实现仓颉图形图像能力。
-- Effect：主要完成图片效果、渲染特效等效果处理的能力，包括：多效果的串联、并联处理，在布局时加入渲染特效、控件交互特效等相关能力。
+
+仓颉图形图像依赖部件引用说明：
+
+- graphic_2d：提供可被图形图像仓颉接口调用的完成图片效果、渲染特效等效果处理的能力的C语言接口，包括：多效果的串联、并联处理，在布局时加入渲染特效、控件交互特效等相关能力。
 - 仓颉互操作：封装C语言互操作公共接口，并提供仓颉标签类实现用于对仓颉API进行标注，以及提供抛向用户的BusinessException异常类定义。
-- 仓颉DFX：负责提供日志接口，用于在关键路径处打印日志。
+- 仓颉DFX：负责提供日志接口，提供可被图形图像仓颉接口调用的在关键路径处打印日志能力的仓颉接口。
 
 ## 目录
 
@@ -40,6 +49,10 @@ foundation/graphic/graphic_cangjie_wrapper
 
 色彩管理，包括创建标准色彩空间和自定义色彩空间，以及获取色彩空间相关信息的方法。支持开发者在图片处理、相机管理中设置/获取颜色空间相关信息。
 
+相关使用指南请参见[色彩管理开发指导](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_zh_cn/graphics/cj-color-manager-development-guide.md)。
+
+## 约束
+
 与ArkTS提供的API能力相比，暂不支持以下功能：
 
 - UI框架的绘制能力。
@@ -47,9 +60,6 @@ foundation/graphic/graphic_cangjie_wrapper
 - 动画引擎的相关能力。
 - 图片效果、渲染特效能力。
 - 显示与内存管理能力。
-
-
-图形相关API请参见[色彩管理API](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/ArkGraphics2D/cj-apis-color_manager.md)。
 
 ## 参与贡献
 
