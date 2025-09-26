@@ -15,11 +15,11 @@
 
 接口层说明：
 
-- 色彩管理API：基于色彩管理封装面向开发者开放的仓颉公开接口声明。
+- 色彩管理API：提供管理抽象化色域对象的一些基础能力，包括色域对象的创建与色域基础属性的获取的仓颉公开接口声明。
 
 框架层说明：
 
-- 色彩管理封装：提供色域相关配置能力。该封装层是基于graphic_2d对色彩管理功能进行的仓颉封装实现。
+- 色彩管理封装：提供色域相关创建与获取能力。该封装层是基于graphic_2d对色彩管理功能进行的仓颉封装实现。
 
 仓颉图形图像依赖部件引用说明：
 
@@ -53,11 +53,18 @@ foundation/graphic/graphic_cangjie_wrapper
 
 与ArkTS提供的API能力相比，暂不支持以下功能：
 
-- [图片处理能力图片效果、渲染特效功能](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-effectKit.md)。
-- [自绘制UI的可变帧率功能](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-displaySync.md)。
-- [HDR(高动态显示范围)功能](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-hdrCapability.md)
-- [文本布局和字体管理功能](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-text.md)。
-- [效果级联功能](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-uiEffect.md)
+- AR引擎服务
+- graphic_3d服务
+- 图形加速服务
+- GPU加速引擎服务
+
+graphic_2d服务中暂不支持：
+
+- [图像效果](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-effectKit.md)：提供了处理图像的基础能力，包括亮度调节、模糊化、灰度调节和智能取色等。
+- [可变帧率](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-displaySync.md)：支持让开发者以指定帧率来运行UI业务，一般用于开发者自绘制UI，并且对于帧率有特定诉求的场景。
+- [HDR能力](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-hdrCapability.md)：提供HDR（高动态显示范围）能力。
+- [文本模块](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-text.md)：提供高质量的排版，包括字符到字形的转换、字距调整、换行、对齐、文本测量等。。
+- [效果级联](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-uiEffect.md)：提供组件效果的一些基础能力，包括模糊、边缘像素扩展、提亮等。
 
 ## 参与贡献
 
