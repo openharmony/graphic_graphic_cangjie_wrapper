@@ -1,4 +1,4 @@
-# graphic_cangjie_wrapper
+# graphic_cangjie_wrapper(beta feature)
 
 ## Introduction
 
