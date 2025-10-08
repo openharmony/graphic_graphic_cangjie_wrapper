@@ -16,7 +16,7 @@
 import("//build/ohos.gni")
 import("//build/templates/cangjie/cjc.gni")
 
-ohos_cangjie_shared_library("ArkGraphics2D") {
+ohos_cangjie_shared_library("kit.ArkGraphics2D") {
   sources = [ "index.cj" ]
 
   cj_deps = [ "../../ohos/graphics/color_space_manager:ohos.graphics.color_space_manager" ]

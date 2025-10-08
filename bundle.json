@@ -31,7 +31,7 @@
     },
     "build": {
       "sub_component": [
-        "//foundation/graphic/graphic_cangjie_wrapper/kit/ArkGraphics2D:ArkGraphics2D",
+        "//foundation/graphic/graphic_cangjie_wrapper/kit/ArkGraphics2D:kit.ArkGraphics2D",
         "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics:ohos.graphics",
         "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
       ],
