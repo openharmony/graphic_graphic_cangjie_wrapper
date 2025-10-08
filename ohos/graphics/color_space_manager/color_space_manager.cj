@@ -41,7 +41,6 @@ foreign {
  * @throws { BusinessException } 401 - Parameter error. Possible cause: 1.Incorrect parameter type.
  *                                 2.Parameter verification failed.
  * @throws { BusinessException } 18600001 - The parameter value is abnormal.
- * @relation function create(colorSpaceName: ColorSpace): ColorSpaceManager
  */
 @!APILevel[
     22,
@@ -69,7 +68,6 @@ public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
  * @throws { BusinessException } 401 - Parameter error. Possible cause: 1.Incorrect parameter type.
  *                                 2.Parameter verification failed.
  * @throws { BusinessException } 18600001 - The parameter value is abnormal.
- * @relation function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManager
  */
 @!APILevel[
     22,
@@ -92,8 +90,6 @@ public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceMa
 
 /**
  * Defines a color space object and manages its key information.
- *
- * @relation interface ColorSpaceManager
  */
 @!APILevel[
     22,
@@ -113,7 +109,6 @@ public class ColorSpaceManager <: RemoteDataLite {
      *
      * @returns { ColorSpace } Returns the name of color space type.
      * @throws { BusinessException } 18600001 - The parameter value is abnormal.
-     * @relation getColorSpaceName(): ColorSpace
      */
     @!APILevel[
         22,
@@ -133,7 +128,6 @@ public class ColorSpaceManager <: RemoteDataLite {
      *
      * @returns { Array<Float32> } Returns the white point value of color space.
      * @throws { BusinessException } 18600001 - The parameter value is abnormal.
-     * @relation getWhitePoint(): Array<number>
      */
     @!APILevel[
         22,
@@ -158,7 +152,6 @@ public class ColorSpaceManager <: RemoteDataLite {
      *
      * @returns { Float32 } Returns the gamma value of color space.
      * @throws { BusinessException } 18600001 - The parameter value is abnormal.
-     * @relation getGamma(): number
      */
     @!APILevel[
         22,

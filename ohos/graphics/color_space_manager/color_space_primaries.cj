@@ -23,8 +23,6 @@ import std.deriving.Derive
 
 /**
  * Enumerates color space types.
- *
- * @relation enum ColorSpace
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -34,8 +32,6 @@ import std.deriving.Derive
 public enum ColorSpace {
     /**
      * Indicates an unknown color space.
-     *
-     * @relation UNKNOWN = 0
      */
     @!APILevel[
         22,
@@ -45,8 +41,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on Adobe RGB (1998).
-     *
-     * @relation ADOBE_RGB_1998 = 1
      */
     @!APILevel[
         22,
@@ -56,8 +50,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on SMPTE RP 431-2-2007 and IEC 61966-2.1:1999.
-     *
-     * @relation DCI_P3 = 2
      */
     @!APILevel[
         22,
@@ -67,8 +59,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on SMPTE RP 431-2-2007 and IEC 61966-2.1:1999.
-     *
-     * @relation DISPLAY_P3 = 3
      */
     @!APILevel[
         22,
@@ -78,8 +68,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the standard red green blue (SRGB) color space based on IEC 61966-2.1:1999.
-     *
-     * @relation SRGB = 4
      */
     @!APILevel[
         22,
@@ -89,8 +77,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates a customized color space.
-     *
-     * @relation CUSTOM = 5
      */
     @!APILevel[
         22,
@@ -100,8 +86,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.709.
-     *
-     * @relation BT709 = 6
      */
     @!APILevel[
         22,
@@ -111,8 +95,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.601.
-     *
-     * @relation BT601_EBU = 7
      */
     @!APILevel[
         22,
@@ -122,8 +104,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.601.
-     *
-     * @relation BT601_SMPTE_C = 8
      */
     @!APILevel[
         22,
@@ -133,8 +113,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.2020.
-     *
-     * @relation BT2020_HLG = 9
      */
     @!APILevel[
         22,
@@ -144,8 +122,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.2020.
-     *
-     * @relation BT2020_PQ = 10
      */
     @!APILevel[
         22,
@@ -155,8 +131,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_HLG | RANGE_FULL
-     *
-     * @relation P3_HLG = 11
      */
     @!APILevel[
         22,
@@ -166,8 +140,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_PQ | RANGE_FULL
-     *
-     * @relation P3_PQ = 12
      */
     @!APILevel[
         22,
@@ -177,8 +149,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_ADOBE_RGB | TRANSFUNC_ADOBE_RGB | RANGE_LIMIT
-     *
-     * @relation ADOBE_RGB_1998_LIMIT = 13
      */
     @!APILevel[
         22,
@@ -188,8 +158,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_SRGB | RANGE_LIMIT
-     *
-     * @relation DISPLAY_P3_LIMIT = 14
      */
     @!APILevel[
         22,
@@ -199,8 +167,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_SRGB | TRANSFUNC_SRGB | RANGE_LIMIT
-     *
-     * @relation SRGB_LIMIT = 15
      */
     @!APILevel[
         22,
@@ -210,8 +176,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT709 | TRANSFUNC_BT709 | RANGE_LIMIT
-     *
-     * @relation BT709_LIMIT = 16
      */
     @!APILevel[
         22,
@@ -221,8 +185,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT601_P | TRANSFUNC_BT709 | RANGE_LIMIT
-     *
-     * @relation BT601_EBU_LIMIT = 17
      */
     @!APILevel[
         22,
@@ -232,8 +194,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT601_N | TRANSFUNC_BT709 | RANGE_LIMIT
-     *
-     * @relation BT601_SMPTE_C_LIMIT = 18
      */
     @!APILevel[
         22,
@@ -243,8 +203,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT2020 | TRANSFUNC_HLG | RANGE_LIMIT
-     *
-     * @relation BT2020_HLG_LIMIT = 19
      */
     @!APILevel[
         22,
@@ -254,8 +212,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT2020 | TRANSFUNC_PQ | RANGE_LIMIT
-     *
-     * @relation BT2020_PQ_LIMIT = 20
      */
     @!APILevel[
         22,
@@ -265,8 +221,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_HLG | RANGE_LIMIT
-     *
-     * @relation P3_HLG_LIMIT = 21
      */
     @!APILevel[
         22,
@@ -276,8 +230,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_PQ | RANGE_LIMIT
-     *
-     * @relation P3_PQ_LIMIT = 22
      */
     @!APILevel[
         22,
@@ -287,8 +239,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_LINEAR
-     *
-     * @relation LINEAR_P3 = 23
      */
     @!APILevel[
         22,
@@ -298,8 +248,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_SRGB | TRANSFUNC_LINEAR
-     *
-     * @relation LINEAR_SRGB = 24
      */
     @!APILevel[
         22,
@@ -309,8 +257,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT709 | TRANSFUNC_LINEAR
-     *
-     * @relation LINEAR_BT709 = LINEAR_SRGB
      */
     @!APILevel[
         22,
@@ -320,8 +266,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT2020 | TRANSFUNC_LINEAR
-     *
-     * @relation LINEAR_BT2020 = 25
      */
     @!APILevel[
         22,
@@ -331,8 +275,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_SRGB | TRANSFUNC_SRGB | RANGE_FULL
-     *
-     * @relation DISPLAY_SRGB = SRGB
      */
     @!APILevel[
         22,
@@ -342,8 +284,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_SRGB | RANGE_FULL
-     *
-     * @relation DISPLAY_P3_SRGB = DISPLAY_P3
      */
     @!APILevel[
         22,
@@ -353,8 +293,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_HLG | RANGE_FULL
-     *
-     * @relation DISPLAY_P3_HLG = P3_HLG
      */
     @!APILevel[
         22,
@@ -364,8 +302,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_DISPLAY_P3 | TRANSFUNC_PQ | RANGE_FULL
-     *
-     * @relation DISPLAY_P3_PQ = P3_PQ
      */
     @!APILevel[
         22,
@@ -447,8 +383,6 @@ public enum ColorSpace {
 /**
  * Describes the primary colors red, green, blue and white point coordinated as (x, y)
   in color space, in terms of real world chromaticities.
- *
- * @relation interface ColorSpacePrimaries
  */
 @!APILevel[
     22,
@@ -457,8 +391,6 @@ public enum ColorSpace {
 public class ColorSpacePrimaries {
     /**
      * Coordinate value x of red color.
-     *
-     * @relation redX: number
      */
     @!APILevel[
         22,
@@ -468,8 +400,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of red color.
-     *
-     * @relation redY: number
      */
     @!APILevel[
         22,
@@ -479,8 +409,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value x of green color.
-     *
-     * @relation greenX: number
      */
     @!APILevel[
         22,
@@ -490,8 +418,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of green color.
-     *
-     * @relation greenY: number
      */
     @!APILevel[
         22,
@@ -501,8 +427,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value x of blue color.
-     *
-     * @relation blueX: number
      */
     @!APILevel[
         22,
@@ -512,8 +436,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of blue color.
-     *
-     * @relation blueY: number
      */
     @!APILevel[
         22,
@@ -523,8 +445,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value x of white point.
-     *
-     * @relation whitePointX: number
      */
     @!APILevel[
         22,
@@ -534,8 +454,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of white point.
-     *
-     * @relation whitePointY: number
      */
     @!APILevel[
         22,
