@@ -1,7 +1,7 @@
 {
   "name": "@ohos/graphic_cangjie_wrapper",
   "description": "The graphic_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the Graphics Subsystem.",
-  "version": "6.0",
+  "version": "6.1",
   "license": "Apache License 2.0",
   "publishAs": "code-segment",
   "segment": {
@@ -31,7 +31,7 @@
     },
     "build": {
       "sub_component": [
-        "//foundation/graphic/graphic_cangjie_wrapper/kit/ArkGraphics2D:ArkGraphics2D",
+        "//foundation/graphic/graphic_cangjie_wrapper/kit/ArkGraphics2D:kit.ArkGraphics2D",
         "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics:ohos.graphics",
         "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
       ],

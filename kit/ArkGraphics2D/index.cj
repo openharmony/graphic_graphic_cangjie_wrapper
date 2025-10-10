@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
-package ArkGraphics2D
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
+package kit.ArkGraphics2D
 
 public import ohos.graphics.color_space_manager.*
