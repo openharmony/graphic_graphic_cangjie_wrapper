@@ -38,8 +38,6 @@ foreign {
  *
  * @param { ColorSpace } colorSpaceName - Indicates the type of color space.
  * @returns { ColorSpaceManager } Returns a color space manager object created by provided type.
- * @throws { BusinessException } 401 - Parameter error. Possible cause: 1.Incorrect parameter type.
- *                                 2.Parameter verification failed.
  * @throws { BusinessException } 18600001 - The parameter value is abnormal.
  */
 @!APILevel[
@@ -65,8 +63,6 @@ public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
  * @param { ColorSpacePrimaries } primaries - Indicates the customized color primaries.
  * @param { Float32 } gamma - Indicates display gamma value
  * @returns { ColorSpaceManager } Returns a color space manager object created by provided type.
- * @throws { BusinessException } 401 - Parameter error. Possible cause: 1.Incorrect parameter type.
- *                                 2.Parameter verification failed.
  * @throws { BusinessException } 18600001 - The parameter value is abnormal.
  */
 @!APILevel[
@@ -90,6 +86,7 @@ public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceMa
 
 /**
  * Defines a color space object and manages its key information.
+ *
  */
 @!APILevel[
     22,
