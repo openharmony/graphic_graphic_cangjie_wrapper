@@ -21,7 +21,7 @@ import std.collection.HashMap
 import ohos.business_exception.*
 
 let ERROR_CODE_MAP = HashMap<Int32, String>(
-    [(18600001, "Parameter value is abnormal. Cannot create color manager object using ApiColorSpaceType 5")])
+    [(18600001, "Parameter value is abnormal.")])
 
 func checkRet(errCode: Int32, message: String) {
     if (errCode != 0) {
