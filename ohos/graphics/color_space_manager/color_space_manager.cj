@@ -17,8 +17,8 @@
 
 package ohos.graphics.color_space_manager
 
-import ohos.ffi.*
-import ohos.labels.*
+import ohos.ffi.{RetDataCString, RemoteDataLite, releaseFFIData}
+import ohos.labels.APILevel
 import ohos.business_exception.BusinessException
 
 foreign {

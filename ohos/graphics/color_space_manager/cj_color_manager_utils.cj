@@ -18,7 +18,7 @@
 package ohos.graphics.color_space_manager
 
 import std.collection.HashMap
-import ohos.business_exception.*
+import ohos.business_exception.{BusinessException, getUniversalErrorMsg}
 
 let ERROR_CODE_MAP = HashMap<Int32, String>(
     [(18600001, "Parameter value is abnormal.")])
