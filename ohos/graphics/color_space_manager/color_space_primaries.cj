@@ -17,7 +17,7 @@
 
 package ohos.graphics.color_space_manager
 
-import ohos.labels.*
+import ohos.labels.APILevel
 import ohos.business_exception.BusinessException
 
 import std.deriving.Derive
