@@ -41,7 +41,7 @@ foreign {
  * @throws { BusinessException } 18600001 - The parameter value is abnormal.
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
@@ -66,7 +66,7 @@ public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
  * @throws { BusinessException } 18600001 - The parameter value is abnormal.
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceManager {
@@ -89,7 +89,7 @@ public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceMa
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
 ]
 public class ColorSpaceManager <: RemoteDataLite {
@@ -108,7 +108,7 @@ public class ColorSpaceManager <: RemoteDataLite {
      * @throws { BusinessException } 18600001 - The parameter value is abnormal.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public func getColorSpaceName(): ColorSpace {
@@ -127,7 +127,7 @@ public class ColorSpaceManager <: RemoteDataLite {
      * @throws { BusinessException } 18600001 - The parameter value is abnormal.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public func getWhitePoint(): Array<Float32> {
@@ -148,7 +148,7 @@ public class ColorSpaceManager <: RemoteDataLite {
      * @throws { BusinessException } 18600001 - The parameter value is abnormal.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     public func getGamma(): Float32 {
