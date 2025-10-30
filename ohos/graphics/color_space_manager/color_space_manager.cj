@@ -17,8 +17,8 @@
 
 package ohos.graphics.color_space_manager
 
-import ohos.ffi.*
-import ohos.labels.*
+import ohos.ffi.{RetDataCString, RemoteDataLite, releaseFFIData}
+import ohos.labels.APILevel
 import ohos.business_exception.BusinessException
 
 foreign {
@@ -134,9 +134,6 @@ public class ColorSpaceManager <: RemoteDataLite {
         unsafe {
             var errCode: Int32 = 0
             let res = CJ_ColorMgrGetWhitePoint(getID(), inout errCode)
-            if (res.isNull()) {
-                throw BusinessException(errCode, "Parameter value is abnormal. Fail to get white point.")
-            }
             checkRet(errCode, "[ColorSpaceManager] getWhitePoint: ")
             let arr = Array<Float32>(2, {i => res.read(i)})
             LibC.free(res)

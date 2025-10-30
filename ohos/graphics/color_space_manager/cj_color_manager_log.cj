@@ -17,6 +17,6 @@
 
 package ohos.graphics.color_space_manager
 
-import ohos.hilog.*
+import ohos.hilog.HilogChannel
 
 let COLOR_MGR_LOG = HilogChannel(3, 0xD001400, "CJ-colorMgr")
