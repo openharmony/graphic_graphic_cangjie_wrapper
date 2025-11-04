@@ -17,7 +17,7 @@
 
 package ohos.graphics.color_space_manager
 
-import ohos.labels.APILevel
+import ohos.labels.{APILevel, Hide}
 import ohos.business_exception.BusinessException
 
 import std.deriving.Derive
@@ -341,6 +341,12 @@ public enum ColorSpace {
         syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
     ]
     DisplayP3Pq
+    |
+    @!Hide
+    HLog
+    |
+    @!Hide
+    DisplayBt2020Srgb
     | ...
 
     protected func getValue(): UInt32 {
