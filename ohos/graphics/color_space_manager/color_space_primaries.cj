@@ -83,16 +83,6 @@ public enum ColorSpace {
     Srgb
     |
     /**
-     * Indicates a customized color space.
-     *
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
-    ]
-    Custom
-    |
-    /**
      * Indicates the color space based on ITU-R BT.709.
      *
      */
@@ -347,6 +337,16 @@ public enum ColorSpace {
     |
     @!Hide
     DisplayBt2020Srgb
+    |
+    /**
+     * Indicates a customized color space.
+     *
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+    ]
+    Custom
     | ...
 
     protected func getValue(): UInt32 {
