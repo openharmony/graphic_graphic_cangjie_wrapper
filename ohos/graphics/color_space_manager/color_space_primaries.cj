@@ -24,7 +24,6 @@ import std.deriving.Derive
 
 /**
  * Enumerates color space types.
- *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -34,7 +33,6 @@ import std.deriving.Derive
 public enum ColorSpace {
     /**
      * Indicates an unknown color space.
-     *
      */
     @!APILevel[
         since: "22",
@@ -44,7 +42,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on Adobe RGB (1998).
-     *
      */
     @!APILevel[
         since: "22",
@@ -54,7 +51,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on SMPTE RP 431-2-2007 and IEC 61966-2.1:1999.
-     *
      */
     @!APILevel[
         since: "22",
@@ -64,7 +60,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on SMPTE RP 431-2-2007 and IEC 61966-2.1:1999.
-     *
      */
     @!APILevel[
         since: "22",
@@ -74,7 +69,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates the standard red green blue (SRGB) color space based on IEC 61966-2.1:1999.
-     *
      */
     @!APILevel[
         since: "22",
@@ -84,7 +78,7 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.709.
-     *
+     * PRIMARIES_BT709 | TRANSFUNC_BT709 | RANGE_FULL
      */
     @!APILevel[
         since: "22",
@@ -94,7 +88,7 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.601.
-     *
+     * PRIMARIES_BT601_P | TRANSFUNC_BT709 | RANGE_FULL
      */
     @!APILevel[
         since: "22",
@@ -104,7 +98,7 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.601.
-     *
+     * PRIMARIES_BT601_N | TRANSFUNC_BT709 | RANGE_FULL
      */
     @!APILevel[
         since: "22",
@@ -114,7 +108,7 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.2020.
-     *
+     * PRIMARIES_BT2020 | TRANSFUNC_HLG | RANGE_FULL
      */
     @!APILevel[
         since: "22",
@@ -124,7 +118,7 @@ public enum ColorSpace {
     |
     /**
      * Indicates the color space based on ITU-R BT.2020.
-     *
+     * PRIMARIES_BT2020 | TRANSFUNC_PQ | RANGE_FULL
      */
     @!APILevel[
         since: "22",
@@ -134,7 +128,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_HLG | RANGE_FULL
-     *
      */
     @!APILevel[
         since: "22",
@@ -144,7 +137,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_PQ | RANGE_FULL
-     *
      */
     @!APILevel[
         since: "22",
@@ -154,7 +146,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_ADOBE_RGB | TRANSFUNC_ADOBE_RGB | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -164,7 +155,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_SRGB | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -174,7 +164,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_SRGB | TRANSFUNC_SRGB | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -184,7 +173,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT709 | TRANSFUNC_BT709 | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -194,7 +182,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT601_P | TRANSFUNC_BT709 | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -204,7 +191,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT601_N | TRANSFUNC_BT709 | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -214,7 +200,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT2020 | TRANSFUNC_HLG | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -224,7 +209,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT2020 | TRANSFUNC_PQ | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -234,7 +218,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_HLG | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -244,7 +227,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_PQ | RANGE_LIMIT
-     *
      */
     @!APILevel[
         since: "22",
@@ -254,7 +236,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_LINEAR
-     *
      */
     @!APILevel[
         since: "22",
@@ -264,7 +245,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_SRGB | TRANSFUNC_LINEAR
-     *
      */
     @!APILevel[
         since: "22",
@@ -274,7 +254,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT709 | TRANSFUNC_LINEAR
-     *
      */
     @!APILevel[
         since: "22",
@@ -284,7 +263,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_BT2020 | TRANSFUNC_LINEAR
-     *
      */
     @!APILevel[
         since: "22",
@@ -294,7 +272,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_SRGB | TRANSFUNC_SRGB | RANGE_FULL
-     *
      */
     @!APILevel[
         since: "22",
@@ -304,7 +281,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_SRGB | RANGE_FULL
-     *
      */
     @!APILevel[
         since: "22",
@@ -314,7 +290,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_P3_D65 | TRANSFUNC_HLG | RANGE_FULL
-     *
      */
     @!APILevel[
         since: "22",
@@ -324,7 +299,6 @@ public enum ColorSpace {
     |
     /**
      * PRIMARIES_DISPLAY_P3 | TRANSFUNC_PQ | RANGE_FULL
-     *
      */
     @!APILevel[
         since: "22",
@@ -340,7 +314,6 @@ public enum ColorSpace {
     |
     /**
      * Indicates a customized color space.
-     *
      */
     @!APILevel[
         since: "22",
@@ -421,8 +394,7 @@ public enum ColorSpace {
 
 /**
  * Describes the primary colors red, green, blue and white point coordinated as (x, y)
-  in color space, in terms of real world chromaticities.
- *
+ * in color space, in terms of real world chromaticities.
  */
 @!APILevel[
     since: "22",
@@ -431,7 +403,6 @@ public enum ColorSpace {
 public class ColorSpacePrimaries {
     /**
      * Coordinate value x of red color.
-     *
      */
     @!APILevel[
         since: "22",
@@ -441,7 +412,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of red color.
-     *
      */
     @!APILevel[
         since: "22",
@@ -451,7 +421,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value x of green color.
-     *
      */
     @!APILevel[
         since: "22",
@@ -461,7 +430,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of green color.
-     *
      */
     @!APILevel[
         since: "22",
@@ -471,7 +439,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value x of blue color.
-     *
      */
     @!APILevel[
         since: "22",
@@ -481,7 +448,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of blue color.
-     *
      */
     @!APILevel[
         since: "22",
@@ -491,7 +457,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value x of white point.
-     *
      */
     @!APILevel[
         since: "22",
@@ -501,7 +466,6 @@ public class ColorSpacePrimaries {
 
     /**
      * Coordinate value y of white point.
-     *
      */
     @!APILevel[
         since: "22",
@@ -512,6 +476,14 @@ public class ColorSpacePrimaries {
     /**
      * ColorSpacePrimaries constructor.
      *
+     * @param {Float32} redX - Coordinate value x of red color
+     * @param {Float32} redY - Coordinate value y of red color
+     * @param {Float32} greenX - Coordinate value x of green color
+     * @param {Float32} greenY - Coordinate value y of green color
+     * @param {Float32} blueX - Coordinate value x of blue color
+     * @param {Float32} blueY - Coordinate value y of blue color
+     * @param {Float32} whitePointX - Coordinate value x of white point
+     * @param {Float32} whitePointY - Coordinate value y of white point.
      */
     @!APILevel[
         since: "22",

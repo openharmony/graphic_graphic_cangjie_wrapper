@@ -41,7 +41,7 @@ class Test_color_manager {
     func test_getColorSpaceName() {
         try {
             let colorSpaceManagerInstance = create(ColorSpace.Srgb)
-            let colorSpace: ColorSpace = colorSpaceManagerInstance.getColorSpaceName()
+            let colorSpace: ColorSpace = colorSpaceManagerInstance.getColorSpaceType()
             @Expect(colorSpace.toString(), "ColorSpace.Srgb")
         } catch (e: Exception) {
             @Expect(false)
