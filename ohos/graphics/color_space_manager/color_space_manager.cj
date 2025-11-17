@@ -36,18 +36,19 @@ foreign {
 /**
  * Create a color space manager by provided color space type.
  *
- * @param { ColorSpace } colorSpaceName - Indicates the type of color space.
+ * @param { ColorSpace } colorSpaceType - Indicates the type of color space.
  * @returns { ColorSpaceManager } Returns a color space manager object created by provided type.
  * @throws { BusinessException } 18600001 - The parameter value is abnormal.
  */
 @!APILevel[
     since: "22",
-    syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+    syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core",
+    throwexception: true
 ]
-public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
+public func create(colorSpaceType: ColorSpace): ColorSpaceManager {
     unsafe {
         var id: Int64 = 0
-        let res = CJ_ColorMgrCreateByColorSpace(colorSpaceName.getValue(), inout id)
+        let res = CJ_ColorMgrCreateByColorSpace(colorSpaceType.getValue(), inout id)
         let errMsg = res.data.toString()
         LibC.free(res.data)
         if (res.code != 0) {
@@ -67,7 +68,8 @@ public func create(colorSpaceName: ColorSpace): ColorSpaceManager {
  */
 @!APILevel[
     since: "22",
-    syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+    syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core",
+    throwexception: true
 ]
 public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceManager {
     unsafe {
@@ -86,7 +88,6 @@ public func create(primaries: ColorSpacePrimaries, gamma: Float32): ColorSpaceMa
 
 /**
  * Defines a color space object and manages its key information.
- *
  */
 @!APILevel[
     since: "22",
@@ -109,13 +110,14 @@ public class ColorSpaceManager <: RemoteDataLite {
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core",
+        throwexception: true
     ]
-    public func getColorSpaceName(): ColorSpace {
+    public func getColorSpaceType(): ColorSpace {
         unsafe {
             var errCode: Int32 = 0
             let res = CJ_ColorMgrGetColorSpaceName(getID(), inout errCode)
-            checkRet(errCode, "[ColorSpaceManager] getColorSpaceName: ")
+            checkRet(errCode, "[ColorSpaceManager] getColorSpaceType: ")
             return ColorSpace.parse(res)
         }
     }
@@ -128,7 +130,8 @@ public class ColorSpaceManager <: RemoteDataLite {
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core",
+        throwexception: true
     ]
     public func getWhitePoint(): Array<Float32> {
         unsafe {
@@ -149,7 +152,8 @@ public class ColorSpaceManager <: RemoteDataLite {
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core"
+        syscap: "SystemCapability.Graphic.Graphic2D.ColorManager.Core",
+        throwexception: true
     ]
     public func getGamma(): Float32 {
         unsafe {
