@@ -38,6 +38,12 @@
       "inner_kits": [
         {
           "name": "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
+        },
+        {
+          "name": "//foundation/graphic/graphic_cangjie_wrapper:copy_sdk_graphic_cangjie_libs"
+        },
+        {
+          "name": "//foundation/graphic/graphic_cangjie_wrapper:copy_sdk_graphic_cangjie_libs_kit"
         }
       ],
       "test": []
