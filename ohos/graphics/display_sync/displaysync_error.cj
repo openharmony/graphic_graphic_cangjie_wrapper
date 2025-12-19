@@ -15,7 +15,26 @@
 
 // The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
-package kit.ArkGraphics2D
+package ohos.graphics.display_sync
 
-public import ohos.graphics.color_space_manager.*
-public import ohos.graphics.display_sync.*
+import ohos.ffi.{SUCCESS_CODE}
+import ohos.business_exception.{BusinessException, getUniversalErrorMsg}
+
+const INNER_EXCEPTION: Int32 = -1
+
+func getErrorMsg(code: Int32): String {
+    if (let Some(v) <- getUniversalErrorMsg(code)) {
+        return v
+    } else {
+        return "Unknown error code ${code}"
+    }
+}
+
+func throwIfNotSuccess(code: Int32): Unit {
+    if (code != SUCCESS_CODE) {
+        if (code == INNER_EXCEPTION) {
+            throw IllegalStateException("inner error")
+        }
+        throw BusinessException(code, getErrorMsg(code))
+    }
+}

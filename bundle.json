@@ -24,14 +24,16 @@
       "components": [
         "cangjie_ark_interop",
         "graphic_2d",
-        "hiviewdfx_cangjie_wrapper"
+        "hiviewdfx_cangjie_wrapper",
+        "arkui_cangjie_wrapper"
       ]
     },
     "build": {
       "sub_component": [
         "//foundation/graphic/graphic_cangjie_wrapper/kit/ArkGraphics2D:kit.ArkGraphics2D",
         "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics:ohos.graphics",
-        "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager"
+        "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/color_space_manager:ohos.graphics.color_space_manager",
+        "//foundation/graphic/graphic_cangjie_wrapper/ohos/graphics/display_sync:ohos.graphics.display_sync"
       ],
       "inner_kits": [
         {
