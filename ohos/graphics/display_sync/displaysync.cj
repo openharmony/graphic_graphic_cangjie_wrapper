@@ -193,7 +193,7 @@ public class DisplaySync <: RemoteDataLite {
     /**
      * Deregisters a callback with the corresponding query condition by using the handle.
      * This callback is triggered when DisplaySync dispatching.
-     * @param { ?Callback1Argument<IntervalInfo> } [callback] - The callback function to remove. If not provided, all callbacks for the given event type
+     * @param { ?Callback1Argument<IntervalInfo> } [ callback ] - The callback function to remove. If not provided, all callbacks for the given event type
      *                                                will be removed.
      */
     @!APILevel[
