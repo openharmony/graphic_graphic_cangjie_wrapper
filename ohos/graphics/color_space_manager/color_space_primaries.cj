@@ -306,10 +306,10 @@ public enum ColorSpace {
     ]
     DisplayP3Pq
     |
-    @!Hide
+    @!Hide[isChecked: true]
     HLog
     |
-    @!Hide
+    @!Hide[isChecked: true]
     DisplayBt2020Srgb
     |
     /**
