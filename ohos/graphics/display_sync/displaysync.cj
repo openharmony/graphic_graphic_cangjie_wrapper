@@ -137,7 +137,8 @@ public class IntervalInfo {
 }
 
 /**
- * Provides functions of applying an independent draw frame rate used for drawing the UI.
+ * Provides the DisplaySync interface, which can be used to control
+ * the frequency of triggering callback function.
  */
 @!APILevel[
     since: "24",
