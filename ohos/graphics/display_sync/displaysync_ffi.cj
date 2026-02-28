@@ -17,41 +17,12 @@
 
 package ohos.graphics.display_sync
 
-import ohos.arkui.component.common.ExpectedFrameRateRange
-
 foreign {
     func FfiDisplaySyncCreate(errCode: CPointer<Int32>): Int64
 
     func FfiDisplaySyncOn(id: Int64, `type`: CString, callbackId: Int64): Int32
 
     func FfiDisplaySyncOff(id: Int64, `type`: CString, callbackId: Int64): Int32
-}
-
-@C
-struct CExpectedFrameRateRange {
-    CExpectedFrameRateRange(
-        let min!: Int32 = 60,
-        let max!: Int32 = 60,
-        let expected!: Int32 = 60
-    ) {}
-
-    init(rateRange: ExpectedFrameRateRange) {
-        if (let Some(v) <- rateRange.min) {
-            this.min = v
-        } else {
-            this.min = 60
-        }
-        if (let Some(v) <- rateRange.max) {
-            this.max = v
-        } else {
-            this.max = 60
-        }
-        if (let Some(v) <- rateRange.expected) {
-            this.expected = v
-        } else {
-            this.expected = 60
-        }
-    }
 }
 
 @C

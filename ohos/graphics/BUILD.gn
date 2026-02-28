@@ -17,7 +17,12 @@ import("//build/ohos.gni")
 import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.graphics") {
-  sources = ["graphics.cj"]
+  
+  if (is_mingw || is_mac){
+    sources = [ "../../mock/ohos.graphics.cj" ]
+  } else {
+    sources = [ "graphics.cj" ]
+  }
 
   subsystem_name = "graphic"
   part_name = "graphic_cangjie_wrapper"
