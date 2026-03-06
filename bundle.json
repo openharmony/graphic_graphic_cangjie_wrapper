@@ -25,7 +25,7 @@
         "cangjie_ark_interop",
         "graphic_2d",
         "hiviewdfx_cangjie_wrapper",
-        "arkui_cangjie_wrapper"
+        "ace_engine"
       ]
     },
     "build": {
