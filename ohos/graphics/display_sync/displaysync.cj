@@ -163,6 +163,18 @@ public class DisplaySync <: RemoteDataLite {
     private let eventMng_: EventManage = EventManage()
 
     /**
+     * Create a new DisplaySync object.
+     * @returns { DisplaySync } DisplaySync
+     */
+    @!APILevel[
+        since: "24",
+        syscap: "SystemCapability.ArkUI.ArkUI.Full"
+    ]
+    public static func create(): DisplaySync {
+        return DisplaySync()
+    }
+
+    /**
      * Registers a callback with the corresponding query condition by using the handle.
      * This callback is triggered when DisplaySync dispatching.
      * @param { Callback1Argument<IntervalInfo> } callback - The callback function to be called when DisplaySync dispatching.

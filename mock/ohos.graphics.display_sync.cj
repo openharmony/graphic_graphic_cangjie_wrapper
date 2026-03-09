@@ -50,6 +50,14 @@ public class DisplaySync {
         since: "24",
         syscap: "SystemCapability.ArkUI.ArkUI.Full"
     ]
+    public static func create(): DisplaySync {
+        return DisplaySync()
+    }
+
+    @!APILevel[
+        since: "24",
+        syscap: "SystemCapability.ArkUI.ArkUI.Full"
+    ]
     public func onFrame(callback: Callback1Argument<IntervalInfo>): Unit {
         return ()
     }
